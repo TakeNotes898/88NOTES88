@@ -24,25 +24,23 @@ console.log(greetings("Xena"));
 
 // *****************************************
 // *****************************************
-// smth aint working here :(((())))
+// OH WOWOWOWOWOOWOOW!!!!!!
 // *****************************************
 
-var arr1 = [2, 3, 4, 5, 3, 8, 9]
+var theMainArr = [2, 3, 4, 5, 3, 8, 9]
 
-var oddOrEven1 = () => {
+var oddOrEven1 = (totalyNewArr) => {
   let newArr = [];
-  for (let i=0; i<arr1.length; i++){
-    if (arr1[i] % 2 == 0) {
-      return "EVEN!"
-    } else  {
-      return "ODD!"
-      // console.log(oddOrEven1(3));
+  for (let i=0; i<totalyNewArr.length; i++){
+    if (totalyNewArr[i] % 2 == 0) {
+        newArr.push("EVEN")
+    } else if (totalyNewArr[i] % 2 == 1) {
+        newArr.push("ODD")
     }
-    return newArr;
   }
+  return newArr;
 }
-console.log(oddOrEven1(arr1));
-// console.log(newArr);
+console.log(oddOrEven1(theMainArr));
 
 
 // *****************************************
@@ -187,3 +185,54 @@ console.log(pluralizerPluralizerPluraPluraPlralizer("sheep", 5));
 console.log(pluralizerPluralizerPluraPluraPlralizer("goose", 5));
 console.log(pluralizerPluralizerPluraPluraPlralizer("child", 5));
 console.log(pluralizerPluralizerPluraPluraPlralizer("person", 5));
+
+// *****************************************
+// *****************************************
+// *****************************************
+
+var superArrayForAllTheLoops = [3, 5, 100, 7, 99, 8, -9, 3, -10, 43, 32]
+
+var multiplyBy3 = (numbers) => {
+  let newArrayNumberOne = [];
+  for (let i=0; i<numbers.length; i++) {
+    newArrayNumberOne.push(numbers[i] * 3)
+  }
+  return newArrayNumberOne
+}
+console.log(multiplyBy3(superArrayForAllTheLoops));
+
+// *****************************************
+// *****************************************
+// *****************************************
+
+var returnOnlyOdd = (numbers) => {
+  let newArrNumberTwo = [];
+  for (let i=0; i<numbers.length; i++){
+    if (numbers[i] % 2 == 0){
+      newArrNumberTwo.push(numbers[i])
+    }
+  }
+  return newArrNumberTwo
+}
+console.log(returnOnlyOdd(superArrayForAllTheLoops));
+
+// *****************************************
+// *****************************************
+// *****************************************
+
+var weirdResponse = "whacha doing yo yo yo!"
+
+var capitalizeRomeo = (str) => {
+  return str.toUpperCase()
+}
+console.log(capitalizeRomeo(weirdResponse));
+// *****************************************
+// *****************************************
+// *****************************************
+
+var weirdStringOne = [7, "n", true, "i", "c", 10, "e", -388, "w", 3, "o", 0, "r", false, "k"]
+
+var justSpeakToMeNormal = (str) => {
+  return typeof(string) === ''
+}
+console.log(justSpeakToMeNormal(weirdStringOne));
