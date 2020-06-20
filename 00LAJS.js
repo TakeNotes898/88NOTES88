@@ -233,6 +233,77 @@ console.log(capitalizeRomeo(weirdResponse));
 var weirdStringOne = [7, "n", true, "i", "c", 10, "e", -388, "w", 3, "o", 0, "r", false, "k"]
 
 var justSpeakToMeNormal = (str) => {
-  return typeof(string) === ''
+  return str.filter(element => typeof element == "string").join("")
+
 }
 console.log(justSpeakToMeNormal(weirdStringOne));
+console.log(typeof weirdStringOne);
+
+
+// *****************************************
+// *****************************************
+// *****************************************
+
+var highestNumber = [1, 45, 4, 2, 7, 67, -9, 0, 6]
+
+var letUsFindTheHighestNumber = (numb) => {
+  return Math.max.apply(null, numb)
+}
+console.log(letUsFindTheHighestNumber(highestNumber));
+
+// *****************************************
+// *****************************************
+// *****************************************
+
+var lowestNumber = [1, 45, 4, 2, 7, 67, -9, 0, 6]
+
+var letUsFindTheLowestNumber = (numb) => {
+  return Math.min.apply(null, numb)
+}
+console.log(letUsFindTheLowestNumber(lowestNumber));
+
+// *****************************************
+// *****************************************
+// *****************************************
+
+var addThese1 = [1, 2, 3, 4]
+var addThese2 = []
+
+var letsSumThisUp = (numb) => {
+  let sum = 0
+  for (i=0; i<numb.length; i++){
+    sum +=numb[i]
+  }
+  return sum
+}
+console.log(letsSumThisUp(addThese1));
+console.log(letsSumThisUp(addThese2));
+
+
+
+
+
+
+
+
+
+
+// *****************************************
+// *****************************************
+// *****************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+// *****************************************
+// *****************************************
+// *****************************************
