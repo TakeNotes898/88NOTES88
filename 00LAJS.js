@@ -295,16 +295,36 @@ var calculateTheMean = (meany) => {
 }
 console.log(calculateTheMean(meanChecker));
 
+// *****************************************
+// *****************************************
+// *****************************************
+// Create a function that finds the index of the highest number
 
-
-
-
-
+var indexHighestNumber = [100, 1, 4, 200, 2, 6]
+// creat a function
+var findTheIndexOfHighestNumber = (hindex) => {
+// assign two new variables for the max number and the index
+  let highestIndex = 0;
+  let max = hindex[0];
+  //create for loop that goes through the array
+  for (i=0; i<hindex.length; i++){ // find the highest number
+  // if the number in array is bigger than the hindex[0]
+    if (hindex[i] > max) {
+      //assign the index
+      highestIndex = i;
+      max = hindex[i];
+    }
+  } // return the highest index
+  return highestIndex
+}
+console.log(findTheIndexOfHighestNumber(indexHighestNumber));
 
 
 // *****************************************
 // *****************************************
 // *****************************************
+
+
 
 
 
