@@ -381,11 +381,77 @@ var fullString1 = "javascript is awesome"
 var fullString2 = "I am a LEARN student"
 
 let takeOutVowekls = (noToVowels) =>{
-  for (i=0; i<noToVowels.length; i++){
-    return noToVowels
-  }
+  // for (i=0; i<noToVowels.length; i++){
+    return noToVowels.replace(/[`aeiou`]/gi,'')
+  // }
 }
+console.log(takeOutVowekls(fullString1));
+console.log(takeOutVowekls(fullString2));
 
+
+// *****************************************
+// *****************************************
+// *****************************************
+
+// Merge Arrays: Create a function that takes in two arrays as arguments
+// and returns one array with no duplicate values.
+
+var arr1 = [3, 7, 10, 5, 4, 3, 3]
+var arr2 = [7, 8, 2, 3, 1, 5, 4]
+var arr3 = arr1.concat(arr2)
+
+let checkArrays = (sameNumCheck) =>{
+    let uniqueSet = [... new Set(sameNumCheck)];
+    return uniqueSet;
+}
+console.log(checkArrays(arr3));
+
+// *****************************************
+// *****************************************
+// *****************************************
+
+// Clean Function: Create a function
+// that filters false, null, 0 and blank values from an array.
+
+var filterArrayValues = [58, " ", "abcd", true, null, false, 0]
+
+let cleanUpYourArray = (noNull) =>{
+  // let newArr = []
+  // for (i-0; i<noNull.length; i++){
+    // if (noNull.typof (!('' && ' ' && 0 && false))){
+    // }
+
+    return noNull.filter(value => value !== null && value !== false && value !== 0 && value !== ' ');
+  // }
+  // return newArr
+}
+console.log(cleanUpYourArray(filterArrayValues));
+
+// *****************************************
+// *****************************************
+// *****************************************
+
+// Pre-fill: Write a function that takes in two numbers as arguments
+// and returns an array the length of the first number filled with the second number.
+fillArray = (6, 0)
+fillArray = (4, 11)
+
+
+
+
+
+
+// *****************************************
+// *****************************************
+// *****************************************
+
+// Create a function named addUp that takes a number as an argument.
+// Add up all the numbers from 1 to the number you passed to the function.
+// For example, if the input is 4 then your function should return 10 because 1 + 2 + 3 + 4 = 10.
+
+addUp = (4)
+addUp = (13)
+addUp = (600)
 
 
 
@@ -396,3 +462,12 @@ let takeOutVowekls = (noToVowels) =>{
 // *****************************************
 // *****************************************
 // *****************************************
+
+EPIC Challenge
+High/Low Game
+Create an HTML page and link your JavaScript file
+More information about linking HTML to JavaScript here
+As a user, I see a prompt or input where I can guess a number between 1 and 100 (both inclusive)
+As a user, when I see if my guess is too high or too low
+As a user, if I guess the number correctly I am notified that I won
+STRETCH: As a user, if I have not guessed the correct number in seven tries I see a losing message
