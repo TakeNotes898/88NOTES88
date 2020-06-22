@@ -298,6 +298,8 @@ console.log(calculateTheMean(meanChecker));
 // *****************************************
 // *****************************************
 // *****************************************
+
+
 // Create a function that finds the index of the highest number
 
 var indexHighestNumber = [100, 1, 4, 200, 2, 6]
@@ -325,6 +327,64 @@ console.log(findTheIndexOfHighestNumber(indexHighestNumber));
 // *****************************************
 
 
+// Create a function that takes in a string and returns only the middle value
+var finger1 = "hello"
+var finger2 = "boogeyman"
+
+let findTheMiddleSomething = (finger) =>{
+
+  // let middleFinger = '';
+
+  // for (i=0; i<finger.length; i++){
+
+      // if (finger.length>0){
+        return finger.charAt(Math.floor(finger.length/2));
+      // }
+
+  // }
+  // return middleFinger
+}
+console.log(findTheMiddleSomething(finger1));
+console.log(findTheMiddleSomething(finger2));
+
+// *****************************************
+// *****************************************
+// *****************************************
+
+// Palindrome: Create a function that takes in a string and
+// determines whether the string is a palindrome
+// (the same word forward and backwards)
+
+var isPalindrome1 = "racecar"
+var isPalindrome2 = "albatross"
+
+let findThePalindrome = (drome) =>{
+  if (drome.split('').reverse().join('') === drome){
+    return `${drome} is the freaking polindrome`
+  } else if (drome.split('').reverse().join('') !== drome){
+    return `${drome} is NOT a POLINDROME`
+  }
+}
+
+console.log(findThePalindrome(isPalindrome1));
+console.log(findThePalindrome(isPalindrome2));
+console.log(findThePalindrome('mom'));
+
+// *****************************************
+// *****************************************
+// *****************************************
+
+// Vowels Removed: Create a function that takes in a string
+// and returns a new string with all the vowels removed
+
+var fullString1 = "javascript is awesome"
+var fullString2 = "I am a LEARN student"
+
+let takeOutVowekls = (noToVowels) =>{
+  for (i=0; i<noToVowels.length; i++){
+    return noToVowels
+  }
+}
 
 
 
