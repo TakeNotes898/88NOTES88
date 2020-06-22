@@ -280,6 +280,20 @@ console.log(letsSumThisUp(addThese1));
 console.log(letsSumThisUp(addThese2));
 
 
+// *****************************************
+// *****************************************
+// *****************************************
+
+var meanChecker = [1, 2, 3, 8, 9, 8, 90, 150]
+
+var calculateTheMean = (meany) => {
+  let mean = 0;
+  for (i=0; i< meany.length; i++){
+    mean +=meany[i]/meany.length;
+  }
+  return mean
+}
+console.log(calculateTheMean(meanChecker));
 
 
 
@@ -291,11 +305,6 @@ console.log(letsSumThisUp(addThese2));
 // *****************************************
 // *****************************************
 // *****************************************
-
-
-
-
-
 
 
 
