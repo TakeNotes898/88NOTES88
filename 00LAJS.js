@@ -381,9 +381,7 @@ var fullString1 = "javascript is awesome"
 var fullString2 = "I am a LEARN student"
 
 let takeOutVowekls = (noToVowels) =>{
-  // for (i=0; i<noToVowels.length; i++){
     return noToVowels.replace(/[`aeiou`]/gi,'')
-  // }
 }
 console.log(takeOutVowekls(fullString1));
 console.log(takeOutVowekls(fullString2));
@@ -416,14 +414,7 @@ console.log(checkArrays(arr3));
 var filterArrayValues = [58, " ", "abcd", true, null, false, 0]
 
 let cleanUpYourArray = (noNull) =>{
-  // let newArr = []
-  // for (i-0; i<noNull.length; i++){
-    // if (noNull.typof (!('' && ' ' && 0 && false))){
-    // }
-
     return noNull.filter(value => value !== null && value !== false && value !== 0 && value !== ' ');
-  // }
-  // return newArr
 }
 console.log(cleanUpYourArray(filterArrayValues));
 
