@@ -433,11 +433,17 @@ console.log(cleanUpYourArray(filterArrayValues));
 
 // Pre-fill: Write a function that takes in two numbers as arguments
 // and returns an array the length of the first number filled with the second number.
-fillArray = (6, 0)
-fillArray = (4, 11)
 
+let theFillerUp = (x, z) =>{
+  let newArr = new Array(x);
+  for ( i=0; i<x ; i++){
+    newArr[i] = z;
+  }
+  return newArr;
+}
 
-
+console.log(theFillerUp(6, 0));
+console.log(theFillerUp(4, 11));
 
 
 
@@ -449,25 +455,19 @@ fillArray = (4, 11)
 // Add up all the numbers from 1 to the number you passed to the function.
 // For example, if the input is 4 then your function should return 10 because 1 + 2 + 3 + 4 = 10.
 
-addUp = (4)
-addUp = (13)
-addUp = (600)
+let addUpStuff = (num) =>{
+  let newArr = 0;
+  for (i = 1; i <= num; i++){
+    newArr += i;
+  }
+  return newArr
+}
 
-
-
-
-
-
+console.log(addUpStuff(4));
+console.log(addUpStuff(13));
+console.log(addUpStuff(600));
+console.log(addUpStuff(11));
 
 // *****************************************
 // *****************************************
 // *****************************************
-
-EPIC Challenge
-High/Low Game
-Create an HTML page and link your JavaScript file
-More information about linking HTML to JavaScript here
-As a user, I see a prompt or input where I can guess a number between 1 and 100 (both inclusive)
-As a user, when I see if my guess is too high or too low
-As a user, if I guess the number correctly I am notified that I won
-STRETCH: As a user, if I have not guessed the correct number in seven tries I see a losing message
