@@ -59,7 +59,16 @@ console.log(product.describeProduct());
 //      numero three
 // *****************************************
 // *****************************************
+var lunch = {
+  name: "PB and Banana",
+  type: "sandwich",
+  ingredients: ["bread", "peanut butter", "banana"]
+}
 
+var {this.ingridients} = lunch;
+
+
+console.log(ingridients);
 
 
 // *****************************************
