@@ -65,10 +65,9 @@ var lunch = {
   ingredients: ["bread", "peanut butter", "banana"]
 }
 
-var {this.ingridients} = lunch;
 
-
-console.log(ingridients);
+console.log(lunch.ingredients);
+console.log(lunch.ingredients[3]);
 
 
 // *****************************************
