@@ -60,11 +60,11 @@ console.log(product.describeProduct());
 // *****************************************
 // *****************************************
 var lunch = {
-  name: "PB and Banana",
+  name1: "PB and Banana",
   type: "sandwich",
   ingredients: ["bread", "peanut butter", "banana"]
 }
-const {name, type, ingredients} = lunch
+const {name1, type, ingredients} = lunch
 lunch.ingredients[2]
 console.log(ingredients);
 console.log(ingredients[2]);
@@ -73,48 +73,75 @@ console.log(ingredients[2]);
 // *****************************************
 var newFunkLunch = {
   makeASandwich: function(){
-    return `The ingredients for a ${name} ${type} ${ingredients[0]}, ${ingredients[1]} and ${ingredients[2]}.`
+    return `The ingredients for a ${name1} ${type} ${ingredients[0]}, ${ingredients[1]} and ${ingredients[2]}.`
   }
 }
 lunch = {...lunch, ...newFunkLunch}
-console.log(lunch);
 console.log(lunch.makeASandwich());
 
 // *****************************************
 // *****************************************
 // *****************************************
 var animals = [
-  { name1: "Waffles", type1: "dog", age: 12 },
-  { name1: "Fluffy", type1: "cat", age: 14 },
-  { name1: "Spelunky", type1: "dog", age: 4 },
-  { name1: "Hank", type1: "cat", age: 11 },
+  { name: "Waffles", type: "dog", age: 12 },
+  { name: "Fluffy", type: "cat", age: 14 },
+  { name: "Spelunky", type: "dog", age: 4 },
+  { name: "Hank", type: "cat", age: 11 },
 ]
 // Create a function that takes in any array of objects
 // and returns a new array with only those of type cat.
-var caties = animals.filter(value => value.type1 === "cat")
+var caties = animals.filter(value => value.type === "cat")
 console.log(caties);
 // Using the same array of objects above.
 // Create a function that returns a new array
 // with only the names of the animals.
-
-let newTypeOfArray = {
-  onlyNames: function() {
-    return `bla bla bla ${name1}`
-    // animals.filter(value => value.animals === animals.name1)
-  }
+const onlyNames = animals.map(
+  function({ name }) {
+    return name;})
+console.log(onlyNames);
+// *****************************************
+// *****************************************
+// *****************************************
+let author = {
+    name2: "H. G. Wells",
+    genre: "science fiction"
 }
-animals = {...animals, ...newTypeOfArray}
-console.log(animals);
-// console.log(animals.onlyNames());
-({ name1 } = animals);
-console.log(name1);
+console.log(`${author.name2} is a ${author.genre} author`)
+var {name2, genre} = author;
+console.log(`${name2} is a ${genre} author`)
+// *****************************************
+// *****************************************
+// *****************************************
+let pokeOne = {
+    species: "Charmandar",
+    pokemon_type: "Fire"
+}
 
+let pokeTwo = {
+    species: "Magikarp",
+    pokemon_type: "Water"
+}
+
+var describePokemonToday = {
+  describePokemon: function(){
+    return `${this.species} is a ${this.pokemon_type} pokemon.`
+  }
+};
+
+var pokeType = {
+  0: { ...pokeOne, ...describePokemonToday },
+  1: { ...pokeTwo, ...describePokemonToday }
+}
+var {species, pokemon_type, describePokemon} = pokeType;
+console.log(pokeType);
+
+console.log(pokeType.describePokemon('1'));
+console.log(describePokemon(pokeTwo))
 
 
 // *****************************************
 // *****************************************
 // *****************************************
-
 
 
 
