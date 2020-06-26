@@ -64,21 +64,22 @@ var lunch = {
   type: "sandwich",
   ingredients: ["bread", "peanut butter", "banana"]
 }
-
-
-console.log(lunch.ingredients);
-console.log(lunch.ingredients[3]);
-
-
+const {name, type, ingredients} = lunch
+lunch.ingredients[2]
+console.log(ingredients);
+console.log(ingredients[2]);
 // *****************************************
 // *****************************************
 // *****************************************
-
-
-
-
-
-
+var newFunkLunch = {
+  makeASandwich: function(){
+    return `The ingredients for a ${name} ${type} ${ingredients}.`
+  }
+}
+lunch = {...lunch, ...newFunkLunch}
+// var {newFunkLunch} = lunch;
+console.log(lunch);
+console.log(lunch.makeASandwich());
 
 
 // *****************************************
