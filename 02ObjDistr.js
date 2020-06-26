@@ -78,7 +78,7 @@ var newFunkLunch = {
 }
 lunch = {...lunch, ...newFunkLunch}
 console.log(lunch.makeASandwich());
-
+// console.log(makeASandwich(lunch));
 // *****************************************
 // *****************************************
 // *****************************************
@@ -115,39 +115,37 @@ console.log(`${name2} is a ${genre} author`)
 let pokeOne = {
     species: "Charmandar",
     pokemon_type: "Fire"
-}
-
+};
 let pokeTwo = {
     species: "Magikarp",
     pokemon_type: "Water"
-}
-
-var describePokemonToday = {
-  describePokemon: function(){
-    return `${this.species} is a ${this.pokemon_type} pokemon.`
-  }
+};
+let pokeZero = {
+  species: "Picka",
+  pokemon_type: "Achoo"
 };
 
 var pokeType = {
-  0: { ...pokeOne, ...describePokemonToday },
-  1: { ...pokeTwo, ...describePokemonToday }
+  pokeZero: { ...pokeZero },
+  pokeOne: { ...pokeOne },
+  pokeTwo: { ...pokeTwo },
+  describePokemon: function () {
+    return `${this.species} is a ${this.pokemon_type} pokemon.`
+  }
 }
 var {species, pokemon_type, describePokemon} = pokeType;
 console.log(pokeType);
-
-console.log(pokeType.describePokemon('1'));
+console.log(describePokemon(pokeOne));
 console.log(describePokemon(pokeTwo))
-
-
 // *****************************************
 // *****************************************
 // *****************************************
 
 
 
-
-
-
+// *****************************************
+// *****************************************
+// *****************************************
 
 
 
