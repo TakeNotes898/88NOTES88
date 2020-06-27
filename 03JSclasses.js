@@ -209,28 +209,39 @@ class Coffee {
   }
 }
 
+// Write the code that makes a black coffee.
 var blackCofee = new Coffee ('blAck CoFFee', 0, 0)
 console.log(blackCofee.coffeeProfile());
 
+// Write the code that makes a coffee with 1 cream and 2 sugars.
 var blackCofee = new Coffee ('blAck CoFFee', 1, 2)
 console.log(blackCofee.coffeeProfile());
 
+// Write the code that makes a coffee with 2 sugars.
 var blackCofee = new Coffee ('blAck CoFFee', 0, 2)
 console.log(blackCofee.coffeeProfile());
 
-blackCofee.sugar()
-console.log(blackCofee.sugar());
+// Then write the code that outputs the coffee's profile.
+var superLatte = new Coffee ('latte', 54, 65)
+console.log(superLatte.coffeeProfile());
 
 // *****************************************
 // *****************************************
 // *****************************************
-
 // Latte Maker
 // Write a Latte class that receives a flavor, a milk type and a number of shots.
 // Write a method for your Latte class that outputs the latte's profile.
 // Write the code that makes a regular, single shot latte. Then, log the latte's profile.
 // Write the code that makes a double shot hazelnut latte with almond milk. Then, log the latte's profile.
 
+class Latte {
+  constructor(flavor, milkType, shots){
+    this.flavor = flavor,
+    this.milkType = milkType,
+    this.shots = shots
+  }
+}
+console.log(Latte);
 
 
 
