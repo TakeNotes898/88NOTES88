@@ -225,7 +225,11 @@ console.log(blackCofee.sugar());
 // *****************************************
 // *****************************************
 
-
+// Latte Maker
+// Write a Latte class that receives a flavor, a milk type and a number of shots.
+// Write a method for your Latte class that outputs the latte's profile.
+// Write the code that makes a regular, single shot latte. Then, log the latte's profile.
+// Write the code that makes a double shot hazelnut latte with almond milk. Then, log the latte's profile.
 
 
 
