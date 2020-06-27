@@ -130,13 +130,18 @@ var pokeType = {
   pokeOne: { ...pokeOne },
   pokeTwo: { ...pokeTwo },
   describePokemon: function () {
-    return `${this.species} is a ${this.pokemon_type} pokemon.`
+    console.log ( `${this.species} is a ${this.pokemon_type} pokemon.`);
   }
-}
+};
 var {species, pokemon_type, describePokemon} = pokeType;
+
 console.log(pokeType);
+
+// console.log(`${pokeOne.species} is a ${pokeOne.pokemon_type} pokemon.`),
+// console.log(`${pokeTwo.species} is a ${pokeTwo.pokemon_type} pokemon.`),
+// console.log(describePokemon[0]);
 console.log(describePokemon(pokeOne));
-console.log(describePokemon(pokeTwo))
+console.log(describePokemon(pokeTwo));
 // *****************************************
 // *****************************************
 // *****************************************
