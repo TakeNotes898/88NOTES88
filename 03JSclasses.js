@@ -276,13 +276,31 @@ console.log(doubleHazelNutt.latteProfile());
 // *****************************************
 // *****************************************
 // *****************************************
+//           V = πr^2h
+// *****************************************
+// *****************************************
+// *****************************************
 
+class Cylinder{
+  constructor (pi, r, h){
+    this.pi = Math.PI
+    this.r = r*r
+    this.h = h
+  }
+  theV (){
+    return this.pi*this.r*this.h
+  }
+}
 
+var cylinderOne = new Cylinder ('pi', 4, 5)
+console.log(cylinderOne);
+console.log(cylinderOne.theV().toFixed(4));
 
+var cylinderTwo = new Cylinder ('pi', 34, 5454)
+console.log(cylinderTwo.theV().toFixed(4));
 
-
-
-
+var cylinderThree = new Cylinder ('pi', 1, 1)
+console.log(cylinderThree.theV().toFixed(4));
 
 
 
