@@ -189,7 +189,7 @@ class Coffee {
   }
 
   coffeeProfile(){
-    return(`${this.type}: ${this.creams()}, ${this.sugars()}`)
+    return(`my ${this.type} always has ${this.creams()}, and of course ${this.sugars()}`)
   }
 
   creams(){
@@ -222,36 +222,56 @@ var blackCofee = new Coffee ('blAck CoFFee', 0, 2)
 console.log(blackCofee.coffeeProfile());
 
 // Then write the code that outputs the coffee's profile.
-var superLatte = new Coffee ('latte', 54, 65)
-console.log(superLatte.coffeeProfile());
+var coffeeLatte = new Coffee ('latte', 54, 65)
+console.log(coffeeLatte.coffeeProfile());
 
 // *****************************************
 // *****************************************
 // *****************************************
 // Latte Maker
 // Write a Latte class that receives a flavor, a milk type and a number of shots.
-// Write a method for your Latte class that outputs the latte's profile.
-// Write the code that makes a regular, single shot latte. Then, log the latte's profile.
-// Write the code that makes a double shot hazelnut latte with almond milk. Then, log the latte's profile.
 
 class Latte {
-  constructor(flavor, milkType, shots){
+  constructor(size, flavor, milkType, shot){
+    this.size = size.toLowerCase(),
     this.flavor = flavor,
     this.milkType = milkType,
-    this.shots = shots
+    this.shot = shot
+  }
+  // Write a method for your Latte class that outputs the latte's profile.
+  latteProfile(){
+    return `My Latte is always ${this.flavors()} and has ${this.milks()}, and of the freakin course has ${this.shots()} !!!`
+  }
+  flavors(){
+    if (this.flavor == "Hazel"){
+      return `${this.flavor} is the best flavor in the world`
+    } else if (this.flavor === "Regular"){
+      return `${this.flavor} is just plain flavor`
+    } else if(this.flavor == "Caramel"){
+      return `${this.flavor} is just awsome flavor`
+    }
+  }
+  milks(){
+    if(this.milkType === "whole"){
+      return `${this.milkType} milk is cool`
+    }else if(this.milkType === "half"){
+      return `${this.milkType} milk is not that bad`
+    }else if(this.milkType === "skim"){
+      return `${this.milkType} milk is just plain water, why? `
+    }
+  }
+  shots(){
+    if(this.shot == 1){
+      return `${this.shot} shot`
+    } else if(this.shot > 1) {
+      return `${this.shot} shots`
+    }
   }
 }
-console.log(Latte);
 
-
-
-
-
-
-
-
-
-
+// Write the code that makes a double shot hazelnut latte with almond milk. Then, log the latte's profile.
+var doubleHazelNutt = new Latte ("granDe", "Hazel", "half", 65)
+console.log(doubleHazelNutt.latteProfile());
 
 // *****************************************
 // *****************************************
