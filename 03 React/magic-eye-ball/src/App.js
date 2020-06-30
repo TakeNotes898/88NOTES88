@@ -7,7 +7,7 @@ class App extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      answerArray: [],
+      answerArray: ['yes ', 'no ', 'maybe ', 'in your dreams' ],
       quastion: ''
     }
   }
@@ -15,19 +15,19 @@ class App extends React.Component {
 
 
   getAnswer = () => {
-    const { answerArray } = this.state
-    return this.state.quastion
-  }
-
+    const { answerArray } = this.state;
+    return this.state.answerArray
+    // = Math.ceil(Math.random() * 4)
+  };
 
   handleChange = (e) => {
     this.setState({ quastion: e.target.value })
   }
 
   handleSubmit = () => {
-    const { quastion } = this.setState
-    const answer = this.getAnswer()
-    this.setState({ answer: answer })
+    const { quastion } = this.setState;
+    const answer = this.getAnswer();
+    this.setState({ answer: answer });
   }
 
 render(){
@@ -49,11 +49,7 @@ render(){
 
       <div class="sphere blue"></div>
     </div>
-  )
-}
-
-
-
-
+    )
+  }
 }
 export default App;
