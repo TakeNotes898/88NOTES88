@@ -1,13 +1,29 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
 import './App.css';
+import Background from './vegas.jpeg';
+
+
 
 
 class App extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      answerArray: ['yes ', 'no ', 'maybe ', 'in your dreams' ],
+      answerArray: [
+          'YES!!!!!!! ',
+          'NO NO NO and NO ',
+          "WELL Maybe... ",
+          "if you'll be good",
+          'In YOUR DREAMS',
+          'How about NO',
+          'I REALLY think NOT',
+          'Think you CAN, but NO',
+          'Come again later',
+          "How dare you!?!?!",
+          "Lets not talk about it",
+          "Will talk tomorrow"
+        ],
       quastion: ''
     }
   }
@@ -16,8 +32,7 @@ class App extends React.Component {
 
   getAnswer = () => {
     const { answerArray } = this.state;
-    return this.state.answerArray
-    // = Math.ceil(Math.random() * 4)
+    return this.state.answerArray[ Math.ceil(Math.random() * this.state.answerArray.length) ]
   };
 
   handleChange = (e) => {
@@ -25,29 +40,54 @@ class App extends React.Component {
   }
 
   handleSubmit = () => {
+
     const { quastion } = this.setState;
-    const answer = this.getAnswer();
-    this.setState({ answer: answer });
+
+
+
+    if (this.state.quastion === null || this.state.quastion === '')  {
+      return alert ("come on now! be realistic!!!")
+    } else {
+      const answer = this.getAnswer();
+      this.setState({ answer: answer });
+    }
+
   }
 
 render(){
   return (
     <div class="fullBody">
-      <h1>The Magic Eye Ball</h1>
+      <h1 class="header">The Magic Evil Ball</h1>
       <p><input
         id="inputBox"
         type='text'
         onChange={ this.handleChange }
       /></p>
 
-      <br />
-
-      <button onClick={ this.handleSubmit }>
+      <p><button onClick={ this.handleSubmit } >
         Ask the EYE ball a quastion
-      </button>
-      <p> { this.state.answer } </p>
+      </button></p>
 
-      <div class="sphere blue"></div>
+
+
+
+
+      <br />
+          <p class="sphere">{ this.state.answer }</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </div>
     )
   }
