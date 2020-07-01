@@ -1,5 +1,9 @@
 .App {
   text-align: center;
+
+}
+.header {
+  color: white;
 }
 
 .App-logo {
@@ -37,34 +41,79 @@
   }
 }
 
+button {
+  cursor: pointer;
+}
+
 .fullBody {
   text-align: center;
+  /* font-size: 20px; */
 }
 
 
 
 
-/* the magic 8 ball*/
-.sphere {
-  height: 1200px;
-  width: 1200px;
+/* the magic 8 ball */
+
+
+
+/* .sphere {
+  height: 300px;
+  width: 300px;
   border-radius: 50%;
   text-align: center;
   vertical-align: middle;
-  font-size: 500%;
-  position: relative;
+  position: center;
   box-shadow: inset -10px -10px 100px #000, 10px 10px 20px black, inset 0px 0px 10px black;
   display: inline-block;
   margin: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  vertical-align: middle
 }
 .sphere::after {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(250, 250, 250, 0.9);
   content: '';
-  height: 45%;
-  width: 12%;
-  position: absolute;
-  top: 4%;
-  left: 15%;
+  height: 35%;
+  width: 35%;
+  top: 25%;
+  left: 25%;
   border-radius: 50%;
   transform: rotate(40deg);
+  display: inline-block;
+  position: inherit;
+} */
+
+.sphere {
+  display: block;
+  width: 300px;
+  height: 300px;
+  margin: 30px auto 0;
+  background-color: #3b4ba3;
+  border-radius: 50%;
+  box-shadow: inset -25px -25px 40px rgba(0,0,0,.5);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.sphere::after {
+  background-color: rgba(250, 250, 250, 0.9);
+  content: '8';
+  font-size: 100px;
+  height: 35%;
+  width: 35%;
+  top: 25%;
+  left: 25%;
+  border-radius: 50%;
+  transform: rotate(40deg);
+  display: inline-block;
+  position: inherit;
+}
+
+
+body {
+  background-image: url("vegas.jpeg");
+  /* overflow: hidden; */
 }
