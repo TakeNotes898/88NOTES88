@@ -1,68 +1,33 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Magic 8 Ball Activity
 
-## Available Scripts
+In this activity we're going to create a Magic 8 Ball application.  We'll use a React application as a template to run the code that we are going to write for Magic 8 Ball.
 
-In the project directory, you can run:
 
-### `yarn start`
+### Magic 8 Ball Stories
+* As a user, I can type in a question to the magic 8 ball application.
+* As a user, when I click submit, I see a random answer displayed.
+* As a user, the page is styled, and pleasing to use.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Getting started
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+All the code you'll need to write for this app is going to be inside one function in the `/src/App.js` file.
 
-### `yarn test`
+After you accept the assignment (or clone this repo), you'll want to install all the npm packages using Yarn:
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+$ cd Challenge-Magic8-Ball-React
+$ yarn
+```
 
-### `yarn build`
+Then you are ready to start a server to run the application:
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+$ yarn start
+```
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Now you're ready to code!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To get started, find the `getAnswer` function, and write your code. Every time you save your updated file, the browser window displaying your app will reload.
 
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+### A note for Cloud 9 users
+Once you run the `yarn start` command above,  You'll want to click the 'Preview' button to see your running application.  Should you need to refer to the [Cloud 9 Configuration Instructions](https://github.com/LEARNAcademy/cloud9-config) they can be found in your Syllabus.
