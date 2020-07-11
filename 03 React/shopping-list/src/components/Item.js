@@ -2,12 +2,21 @@ import React, { Component } from 'react';
 
 class Item extends Component{
   render(){
+    let eachItem = this.props.list.map(item => {
+      return(
+        <li>{ item }</li>
+      )
+    })
+
+
+
+
     return(
       <React.Fragment>
 
         <h3>Items</h3>
         <ul>
-          <li>{ this.props.listItem }</li>
+          { eachItem }
         </ul>
 
 
