@@ -14,10 +14,8 @@ class Item extends Component{
     return(
       <React.Fragment>
 
-        <h3>Items</h3>
-        <ul>
-          { eachItem }
-        </ul>
+        <h3>{ this.props.store } Items</h3>
+        <ul>{ eachItem }</ul>
 
 
 
