@@ -14,8 +14,8 @@ class App extends Component{
     return(
       <React.Fragment>
         <h1>To Do List</h1>
-        <Item list = {this.state.listItems} />
-        <Item list = {this.state.hardWareItems} />
+        <Item list = {this.state.listItems} store="Grocery"/>,
+        <Item list = {this.state.hardWareItems} store="Hardware" />
 
 
 
