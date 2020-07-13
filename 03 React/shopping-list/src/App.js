@@ -13,14 +13,11 @@ class App extends Component{
       dailyChore: ""
     }
   }
-
-
+  
   addChore = () => {
     let random = Math.floor(Math.random() * this.state.wildCardChore.length)
     this.setState({ dailyChore: this.state.wildCardChore[random]})
   }
-
-
 
   render(){
     return(
