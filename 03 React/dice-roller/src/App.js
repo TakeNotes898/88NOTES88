@@ -11,7 +11,8 @@ class App extends Component{
   constructor(props){
     super(props)
     this.state = {
-      numberRolled: ""
+      numberRolled: "",
+      numRecorded : []
     }
   }
 
@@ -33,9 +34,10 @@ class App extends Component{
 
 
               <CardColumns>
-                          <Dice
-                            randomNumberRolled={this.randomNumberRolled}
-                            numberRolled={this.state.numberRolled}/>
+                  <Dice
+                    randomNumberRolled={this.randomNumberRolled}
+                    numberRolled={this.state.numberRolled}
+                    numRecorded = {this.state.numRecorded} />
               </CardColumns>
 
 
