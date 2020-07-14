@@ -6,6 +6,14 @@ import Button from 'react-bootstrap/Button';
 class Left extends Component{
 
 
+
+
+  rollTheDice = () => {
+    let theDice = [1, 2, 3, 4, 5, 6]
+    let random = Math.floor(Math.random() * theDice.length)
+    this.props.randomNumberRolled(theDice[random])
+  }
+
   render(){
     return(
       <React.Fragment>
@@ -15,9 +23,8 @@ class Left extends Component{
         <Card.Body>
           <Card.Title>What Can you Do Here?</Card.Title>
           <Card.Text>
-          <p><Button type="submit" size="lg"  variant="danger">RoLL</Button></p>
-          <p><Button size="lg"  type = "reset" variant="danger">Reset</Button></p>
-          <p><Button size="lg"  href= "XenaDev.com" variant="warning">XenaDev</Button></p>
+          
+          <p><a href="http://xenadev.com" target="_blank"><Button size="lg" variant="warning">XenaDev</Button></a></p>
           </Card.Text>
         </Card.Body>
       </Card>
