@@ -8,17 +8,8 @@ import cover from './img/cover.jpg';
 import Dice from './components/Dice.js';
 
 class App extends Component{
-  constructor(props){
-    super(props)
-    this.state = {
-      numberRolled: "",
-      numRecorded : []
-    }
-  }
+  
 
-  randomNumberRolled = (num) => {
-    this.setState({ numberRolled: num })
-  }
 
 
 
@@ -34,10 +25,7 @@ class App extends Component{
 
 
               <CardColumns>
-                  <Dice
-                    randomNumberRolled={this.randomNumberRolled}
-                    numberRolled={this.state.numberRolled}
-                    numRecorded = {this.state.numRecorded} />
+                  <Dice/>
               </CardColumns>
 
 

@@ -3,6 +3,7 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 // import Image from 'react-bootstrap/Image'
+import zero from '../img/00.jpg';
 import one from '../img/01.jpg';
 import two from '../img/02.jpg';
 import three from '../img/03.jpg';
@@ -15,19 +16,21 @@ class Dice extends Component{
   constructor(){
     super();
     this.state={
-      numberHolder : 2
+      numberHolder : 2,
+      numRecorded : []
 
      }
     }
 
 diceImg = (imgs) => {
-    let theDice = [one, two, three, four, five, six]
+    let theDice = [ zero, one, two, three, four, five, six]
     return theDice[imgs]
 }
 
 rollTheDice = () => {
-  let random = Math.floor(Math.random() * 6)
-  this.setState({ numberHolder : random, imgs : this.props.numRecorded.concat([random])})
+  let random = Math.floor(Math.random() * 7)
+  let newRandom = [random]
+  this.setState({ numberHolder : random, numRecorded : this.state.numRecorded.concat([newRandom])})
 }
 
 reset = () => {
@@ -40,10 +43,13 @@ reset = () => {
 
           <Card className="text-center p-3">
             <Card.Body>
-              <Card.Title>What Can you Do Here?</Card.Title>
+              <Card.Title>
+              <h5>What Can you Do Here?</h5>
+              </Card.Title>
+              <h6>just roll and see the dice go</h6>
               <ButtonGroup className="mr-1"><p><Button type="submit" size="sm"  variant="primary" onClick={ this.rollTheDice}>RoLL</Button></p></ButtonGroup>
               <ButtonGroup className="mr-1"><p><Button size="sm"  onClick = {this.reset} variant="danger">Reset</Button></p></ButtonGroup>
-              <ButtonGroup><p><Button size="sm" variant="warning"><a href="http://xenadev.com" target="_blank">XenaDev</a></Button></p></ButtonGroup>
+              <ButtonGroup><p><Button size="sm" variant="warning"><a href="http://xenadev.com" target="_blank">by XenaDev</a></Button></p></ButtonGroup>
             </Card.Body>
           </Card>
 
@@ -55,12 +61,12 @@ reset = () => {
             </blockquote>
           </Card>
 
+
           <Card className="text-center p-3">
             <Card.Body>
               <Card.Title>What Have we rolled</Card.Title>
-              <Card.Text>
-
-                  <ol>{this.props.numRecorded.map(value => <li>{value}</li>)}</ol>
+              <Card.Text className="orderedList">
+                  {this.state.numRecorded.map(imgs => <p>{imgs}</p>)}
               </Card.Text>
             </Card.Body>
           </Card>
