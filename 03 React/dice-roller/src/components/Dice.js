@@ -33,6 +33,13 @@ rollTheDice = () => {
   this.setState({ numberHolder : random, numRecorded : this.state.numRecorded.concat([newRandom])})
 }
 
+letsGetTheAvarage = (avrg) => {
+
+}
+
+
+
+
 reset = () => {
         window.location.reload()
     }
@@ -50,6 +57,11 @@ reset = () => {
               <ButtonGroup className="mr-1"><p><Button type="submit" size="sm"  variant="primary" onClick={ this.rollTheDice}>RoLL</Button></p></ButtonGroup>
               <ButtonGroup className="mr-1"><p><Button size="sm"  onClick = {this.reset} variant="danger">Reset</Button></p></ButtonGroup>
               <ButtonGroup><p><Button size="sm" variant="warning"><a href="http://xenadev.com" target="_blank">by XenaDev</a></Button></p></ButtonGroup>
+
+              <Card.Text>
+              <p>the Avarage IS: {  } </p>
+              <p>the Avarage IS: {  } </p>
+              </Card.Text>
             </Card.Body>
           </Card>
 
