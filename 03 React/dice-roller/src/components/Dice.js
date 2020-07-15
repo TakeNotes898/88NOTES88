@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
-// import Image from 'react-bootstrap/Image'
-import zero from '../img/00.jpg';
 import one from '../img/01.jpg';
 import two from '../img/02.jpg';
 import three from '../img/03.jpg';
@@ -16,19 +14,21 @@ class Dice extends Component{
   constructor(){
     super();
     this.state={
-      numberHolder : 2,
-      numRecorded : []
-
+      numberHolder : 5,
+      numRecorded : [],
+      rollSum : 0,
+      rollAvarage : 0,
+      timesRolledX : 0
      }
     }
 
 diceImg = (imgs) => {
-    let theDice = [ zero, one, two, three, four, five, six]
-    return theDice[imgs]
+    let theDice = [one, two, three, four, five, six]
+    return theDice[ imgs - 1 ]
 }
 
 rollTheDice = () => {
-  let random = Math.floor(Math.random() * 7)
+  let random = Math.ceil(Math.random() * 6)
   let newRandom = [random]
   this.setState({ numberHolder : random, numRecorded : this.state.numRecorded.concat([newRandom])})
 }
@@ -36,8 +36,6 @@ rollTheDice = () => {
 letsGetTheAvarage = (avrg) => {
 
 }
-
-
 
 
 reset = () => {
@@ -59,7 +57,8 @@ reset = () => {
               <ButtonGroup><p><Button size="sm" variant="warning"><a href="http://xenadev.com" target="_blank">by XenaDev</a></Button></p></ButtonGroup>
 
               <Card.Text>
-              <p>the Avarage IS: {  } </p>
+              <p>You rolled: { this.state.numberHolder } </p>
+              <p>the SUM IS: { this.state.numRecorded } </p>
               <p>the Avarage IS: {  } </p>
               </Card.Text>
             </Card.Body>
@@ -78,7 +77,7 @@ reset = () => {
             <Card.Body>
               <Card.Title>What Have we rolled</Card.Title>
               <Card.Text className="orderedList">
-                  {this.state.numRecorded.map(imgs => <p>{imgs}</p>)}
+                  {this.state.numRecorded.map(value => <p>{value}</p>)}
               </Card.Text>
             </Card.Body>
           </Card>
