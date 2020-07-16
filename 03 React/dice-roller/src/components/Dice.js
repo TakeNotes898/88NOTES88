@@ -14,7 +14,7 @@ class Dice extends Component{
   constructor(){
     super();
     this.state={
-      numberHolder : 5,
+      numberHolder : 3,
       numRecorded : [],
       rollSum : 0,
       rollAvarage : 0,
@@ -33,9 +33,11 @@ rollTheDice = () => {
   this.setState({ numberHolder : random, numRecorded : this.state.numRecorded.concat([newRandom])})
 }
 
-letsGetTheAvarage = (avrg) => {
-
-}
+// letsGetTheAvarage = () => {
+//   let random = Math.ceil(Math.random() * 6)
+//   let newRandom = [random]
+//   this.setState ({rollSum : random + this.state.numberHolder});
+// }
 
 
 reset = () => {
@@ -58,8 +60,9 @@ reset = () => {
 
               <Card.Text>
               <p>You rolled: { this.state.numberHolder } </p>
-              <p>the SUM IS: { this.state.numRecorded } </p>
-              <p>the Avarage IS: {  } </p>
+              <p>the SUM IS: {  this.state.rollSum} </p>
+              <p>the Avarage IS: { this.state.rollAvarage } </p>
+              <p>the Times Rolled: { this.state.timesRolledX } </p>
               </Card.Text>
             </Card.Body>
           </Card>
