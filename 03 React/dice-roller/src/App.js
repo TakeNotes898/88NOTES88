@@ -8,7 +8,7 @@ import cover from './img/cover.jpg';
 import Dice from './components/Dice.js';
 
 class App extends Component{
-  
+
 
 
 
@@ -25,7 +25,7 @@ class App extends Component{
 
 
               <CardColumns>
-                  <Dice/>
+                  <p><Dice/></p>
               </CardColumns>
 
 
