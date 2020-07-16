@@ -33,11 +33,10 @@ rollTheDice = () => {
   this.setState({ numberHolder : random, numRecorded : this.state.numRecorded.concat([newRandom])})
 }
 
-// letsGetTheAvarage = () => {
-//   let random = Math.ceil(Math.random() * 6)
-//   let newRandom = [random]
-//   this.setState ({rollSum : random + this.state.numberHolder});
-// }
+letsGetTheAvarage = () => {
+  let newAvarage = this.state.numberHolder + 1
+  this.setState ({rollAvarage : newAvarage });
+}
 
 
 reset = () => {
