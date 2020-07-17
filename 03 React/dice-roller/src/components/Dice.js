@@ -34,8 +34,8 @@ rollTheDice = () => {
 }
 
 letsGetTheAvarage = () => {
-  let newAvarage = this.state.rollAvarage + 1
-  this.setState ({rollAvarage : newAvarage });
+  let newAvarage = this.state.numRecorded + 1
+  this.setState ({numRecorded : newAvarage });
 }
 
 
@@ -55,7 +55,7 @@ reset = () => {
               <h5>What Can you Do Here?</h5>
               </Card.Title>
               <h6>just roll and see the dice go</h6>
-              <ButtonGroup className="mr-1"><p><Button type="submit" size="sm"  variant="primary" onClick={ this.letsGetTheAvarage, this.rollTheDice } >RoLL</Button></p></ButtonGroup>
+              <ButtonGroup className="mr-1"><p><Button type="submit" size="sm"  variant="primary" onClick={ this.rollTheDice } >RoLL</Button></p></ButtonGroup>
               <ButtonGroup className="mr-1"><p><Button size="sm"  onClick = {this.reset} variant="danger">Reset</Button></p></ButtonGroup>
               <ButtonGroup><p><Button size="sm" variant="warning"><a href="http://xenadev.com" target="_blank">by XenaDev</a></Button></p></ButtonGroup>
 
