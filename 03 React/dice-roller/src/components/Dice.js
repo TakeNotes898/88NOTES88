@@ -57,7 +57,7 @@ reset = () => {
               <h6>just roll and see the dice go</h6>
               <ButtonGroup className="mr-1"><p><Button type="submit" size="sm"  variant="primary" onClick={ this.rollTheDice } >RoLL</Button></p></ButtonGroup>
               <ButtonGroup className="mr-1"><p><Button size="sm"  onClick = {this.reset} variant="danger">Reset</Button></p></ButtonGroup>
-              <ButtonGroup><p><Button size="sm" variant="warning"><a href="http://xenadev.com" target="_blank">by XenaDev</a></Button></p></ButtonGroup>
+              <ButtonGroup><p><Button size="lg" variant="warning"><a href="http://xenadev.com" target="_blank">by XenaDev</a></Button></p></ButtonGroup>
 
               <Card.Text>
               <p>You rolled: { this.state.numberHolder } </p>
