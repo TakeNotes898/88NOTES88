@@ -33,20 +33,23 @@ rollTheDice = () => {
   this.setState({ numberHolder : random, numRecorded : this.state.numRecorded.concat([newRandom])})
 }
 
+letsGetRollsSum = () => {
+    this.setState ({rollSum: parseInt(this.state.numRecorded) + parseInt(this.state.numRecorded)})
+}
+
+
 letsGetTheAvarage = () => {
   let newAvarage = this.state.rollAvarage + 1
-  this.setState ({rollAvarage : newAvarage });
+  this.setState ({rollAvarage : parseInt(this.state.numRecorded)/parseInt(this.state.numRecorded).length });
 }
+
+
 
 letsGetTimesRolles = () => {
   let newRollCount = this.state.timesRolledX + 1
   this.setState ({timesRolledX : newRollCount });
 }
 
-letsGetRollsSum = () => {
-  let newRollSum = this.state.rollSum + 1
-  this.setState ({rollSum : newRollSum });
-}
 
 reset = () => {
         window.location.reload()
