@@ -34,13 +34,25 @@ rollTheDice = () => {
 }
 
 letsGetRollsSum = () => {
-    this.setState ({rollSum: parseInt(this.state.numRecorded) + parseInt(this.state.numRecorded)})
+  for (var i in this.state.numRecorded) {
+    this.state.rollSum += parseInt(this.state.numRecorded[i])
+  }
+  // for (var i = 0; i < this.state.numRecorded.length; i++) {
+  //   this.state.rollSum += this.state.numRecorded[i].reduce(function(c, p){return c + p});
+    // for (var j = 0; j < this.state.numRecorded[i].length; j++) {
+    //   this.state.rollSum += this.state.numRecorded[i][j];
+    // }
+  // }
+
+  return this.state.rollSum;
+    // this.setState ({rollSum: parseInt(this.state.numRecorded, 0) + parseInt(this.state.numRecorded, 0)})
 }
 
 
 letsGetTheAvarage = () => {
-  let newAvarage = this.state.rollAvarage + 1
-  this.setState ({rollAvarage : parseInt(this.state.numRecorded)/parseInt(this.state.numRecorded).length });
+  let arrLength = this.state.numRecorded.arrLength
+
+  this.setState ({rollAvarage : parseInt(this.setState.letsGetRollsSum)/parseInt(arrLength) });
 }
 
 
@@ -72,7 +84,7 @@ reset = () => {
                 this.rollTheDice();
                 this.letsGetTheAvarage();
                 this.letsGetTimesRolles();
-                this.letsGetRollsSum();}}>
+                this.letsGetRollsSum()}}>
               RoLL</Button></p></ButtonGroup>
 
               <ButtonGroup className="mr-1"><p><Button size="sm"  onClick = {this.reset} variant="danger">Reset</Button></p></ButtonGroup>
