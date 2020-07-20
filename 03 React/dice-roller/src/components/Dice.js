@@ -38,6 +38,15 @@ letsGetTheAvarage = () => {
   this.setState ({rollAvarage : newAvarage });
 }
 
+letsGetTimesRolles = () => {
+  let newRollCount = this.state.timesRolledX + 1
+  this.setState ({timesRolledX : newRollCount });
+}
+
+letsGetRollsSum = () => {
+  let newRollSum = this.state.rollSum + 1
+  this.setState ({rollSum : newRollSum });
+}
 
 reset = () => {
         window.location.reload()
@@ -56,8 +65,11 @@ reset = () => {
               </Card.Title>
               <h6>just roll and see the dice go</h6>
               <ButtonGroup className="mr-1"><p><Button type="submit" size="sm"  variant="primary"
-                onClick = {this.rollTheDice}
-                onClick = {this.letsGetTheAvarage}>
+                onClick = {() => {
+                this.rollTheDice();
+                this.letsGetTheAvarage();
+                this.letsGetTimesRolles();
+                this.letsGetRollsSum();}}>
               RoLL</Button></p></ButtonGroup>
 
               <ButtonGroup className="mr-1"><p><Button size="sm"  onClick = {this.reset} variant="danger">Reset</Button></p></ButtonGroup>
