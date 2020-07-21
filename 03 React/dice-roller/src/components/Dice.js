@@ -33,24 +33,24 @@ rollTheDice = () => {
   this.setState({ numberHolder : random, numRecorded : this.state.numRecorded.concat([newRandom])})
 }
 
-letsGetRollsSum = () => {
-  for (var i in this.state.numRecorded) {
-    this.state.rollSum += parseInt(this.state.numRecorded[i])
+letsGetRollsSum = (x, y) => {
+  for (let x in this.state.numRecorded){
+    for (let y  in this.state.numRecorded) {
+      if (this.state.numRecorded[x] + this.state.numRecorded[y] === this.state.rollSum) {
+        this.state.numRecorded.push([this.state.numRecorded[x], this.state.numRecorded[y]])
+      }
+    }
   }
-  // for (var i = 0; i < this.state.numRecorded.length; i++) {
-  //   this.state.rollSum += this.state.numRecorded[i].reduce(function(c, p){return c + p});
-  //   for (var j = 0; j < this.state.numRecorded[i].length; j++) {
-  //     this.state.rollSum += this.state.numRecorded[i][j];
-  //   }
-  // }
+  // for (let i = this.state.numRecorded.length - 1; i > 0; i--) {
+  //     this.state.rollSum += parseInt(this.state.numRecorded[i]);
+    // }
 
-  return this.state.rollSum;
 }
 
 
-letsGetTheAvarage = (val) => {
+letsGetTheAvarage = () => {
   for (var i in this.state.numRecorded) {
-    this.state.rollAvarage = parseInt(this.letsGetRollsSum)/parseInt(this.state.numRecorded).length
+    this.state.rollAvarage = parseInt(this.setState.letsGetRollsSum)/parseInt(this.state.numRecorded).length
   }
     return this.state.rollAvarage
 }
