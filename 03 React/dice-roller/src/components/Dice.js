@@ -14,13 +14,16 @@ class Dice extends Component{
   constructor(){
     super();
     this.state={
-      numberHolder : 3,
+      numberHolder : 0,
       numRecorded : [],
       rollSum : 0,
       rollAvarage : 0,
       timesRolledX : 0
      }
     }
+
+
+
 
 diceImg = (imgs) => {
     let theDice = [one, two, three, four, five, six]
@@ -33,19 +36,13 @@ rollTheDice = () => {
   this.setState({ numberHolder : random, numRecorded : this.state.numRecorded.concat([newRandom])})
 }
 
-letsGetRollsSum = (x, y) => {
-  for (let x in this.state.numRecorded){
-    for (let y  in this.state.numRecorded) {
-      if (this.state.numRecorded[x] + this.state.numRecorded[y] === this.state.rollSum) {
-        this.state.numRecorded.push([this.state.numRecorded[x], this.state.numRecorded[y]])
-      }
-    }
-  }
-  // for (let i = this.state.numRecorded.length - 1; i > 0; i--) {
-  //     this.state.rollSum += parseInt(this.state.numRecorded[i]);
-    // }
 
-}
+letsGetRollsSum() {
+  let newNumberHolder = this.state.numberHolder - 3
+  let newCount = this.state.rollSum += this.state.numberHolder
+  this.setState({ rollSum: newCount })
+  return this.state.rollSum
+  }
 
 
 letsGetTheAvarage = () => {
