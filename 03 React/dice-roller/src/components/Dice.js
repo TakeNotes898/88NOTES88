@@ -46,12 +46,12 @@ letsGetRollsSum() {
 
 
 letsGetTheAvarage = () => {
-  for (var i in this.state.numRecorded) {
-    this.state.rollAvarage = parseInt(this.setState.letsGetRollsSum)/parseInt(this.state.numRecorded).length
-  }
+  for (var i in this.state.numberHolder) {
+    let newRollAvarage = this.setState.letsGetRollsSum / this.state.numRecorded.length
+    this.setState({ rollAvarage: newRollAvarage })
     return this.state.rollAvarage
+  }
 }
-
 
 
 letsGetTimesRolles = () => {
