@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
+import zero from '../img/00.jpg';
 import one from '../img/01.jpg';
 import two from '../img/02.jpg';
 import three from '../img/03.jpg';
@@ -18,7 +19,7 @@ class Dice extends Component{
       numRecorded : [],
       rollSum : 0,
       rollAvarage : 0,
-      timesRolledX : 0
+      timesRolled : 0
      }
     }
 
@@ -26,8 +27,8 @@ class Dice extends Component{
 
 
 diceImg = (imgs) => {
-    let theDice = [one, two, three, four, five, six]
-    return theDice[ imgs - 1 ]
+    let theDice = [zero, one, two, three, four, five, six]
+    return theDice[ imgs ]
 }
 
 rollTheDice = () => {
@@ -38,25 +39,21 @@ rollTheDice = () => {
 
 
 letsGetRollsSum() {
-  let newNumberHolder = this.state.numberHolder - 3
-  let newCount = this.state.rollSum += this.state.numberHolder
-  this.setState({ rollSum: newCount })
+  let newCount = this.state.numberHolder + this.state.rollSum
+  this.setState({ rollSum : newCount })
   return this.state.rollSum
   }
 
 
 letsGetTheAvarage = () => {
-  for (var i in this.setState.rollTheDice) {
-    let newRollAvarage = this.setState.letsGetRollsSum / this.state.numRecorded.length
-    this.setState({ rollAvarage: newRollAvarage })
+    let newRollAvarage = this.state.rollSum / this.state.timesRolled
+    this.setState({ rollAvarage: newRollAvarage.toFixed(2) })
     return this.state.rollAvarage
-  }
 }
 
 
 letsGetTimesRolles = () => {
-  let newRollCount = this.state.timesRolledX + 1
-  this.setState ({timesRolledX : newRollCount });
+  this.setState ({timesRolled : this.state.timesRolled + 1});
 }
 
 
@@ -92,7 +89,7 @@ reset = () => {
               <p>You rolled: { this.state.numberHolder } </p>
               <p>the SUM IS: {  this.state.rollSum} </p>
               <p>the Avarage IS: { this.state.rollAvarage } </p>
-              <p>the Times Rolled: { this.state.timesRolledX } </p>
+              <p>the Times Rolled: { this.state.timesRolled } </p>
               </Card.Text>
             </Card.Body>
           </Card>
