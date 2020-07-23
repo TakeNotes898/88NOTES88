@@ -46,7 +46,7 @@ letsGetRollsSum() {
 
 
 letsGetTheAvarage = () => {
-  for (var i in this.state.numberHolder) {
+  for (var i in this.setState.rollTheDice) {
     let newRollAvarage = this.setState.letsGetRollsSum / this.state.numRecorded.length
     this.setState({ rollAvarage: newRollAvarage })
     return this.state.rollAvarage
