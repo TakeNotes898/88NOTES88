@@ -10,7 +10,6 @@ import four from '../img/04.jpg';
 import five from '../img/05.jpg';
 import six from '../img/06.jpg';
 
-
 class Dice extends Component{
   constructor(){
     super();
@@ -22,9 +21,6 @@ class Dice extends Component{
       timesRolled : 0
      }
     }
-
-
-
 
 diceImg = (imgs) => {
     let theDice = [zero, one, two, three, four, five, six]
@@ -38,8 +34,8 @@ rollTheDice = () => {
 }
 
 
-letsGetRollsSum() {
-  let newCount = this.state.numberHolder + this.state.rollSum
+letsGetRollsSum = () => {
+  let newCount = this.state.rollSum + this.state.numberHolder
   this.setState({ rollSum : newCount })
   return this.state.rollSum
   }
