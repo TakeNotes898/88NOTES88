@@ -63,7 +63,7 @@ reset = () => {
     return(
       <React.Fragment>
 
-          <Card className="text-center p-3">
+          <Card className="text-center p-3" style={{ width: '18rem' }}>
             <Card.Body>
               <Card.Title>
               <h5>What Can you Do Here?</h5>
@@ -91,15 +91,17 @@ reset = () => {
           </Card>
 
 
-          <Card bg="dark" text="white" className="text-center p-3">
+          <Card bg="dark" text="white" className="text-center p-3" style={{ width: '18rem' }}>
+          <Card.Body>
             <blockquote className="blockquote mb-0 card-body">
               <h1>{ this.props.numberRolled }
               <img width='100%' src = { this.diceImg(this.state.numberHolder) }/></h1>
             </blockquote>
+            </Card.Body>
           </Card>
 
 
-          <Card className="text-center p-3">
+          <Card className="text-center p-3" style={{ width: '18rem' }}>
             <Card.Body>
               <Card.Title>What Have we rolled</Card.Title>
               <Card.Text className="orderedList">
