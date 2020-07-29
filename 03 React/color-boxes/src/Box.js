@@ -5,7 +5,9 @@ import React, { Component } from 'react'
 class Box extends Component{
   constructor(props){
     super(props)
-      this.state = { count: 0 }
+      this.state = {
+        coumt: 0
+      }
   }
 
 
